@@ -161,23 +161,57 @@ section {
 
 /* Projects */
 .projects {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 280px); 
+    justify-content: center; 
+    gap: 30px;
+    margin-top: 40px;
 }
 
+
+
+/* Card */
 .card {
     background: #020617;
     padding: 25px;
-    width: 260px;
+    width: 280px;
     border-radius: 12px;
     border: 1px solid #22d3ee;
+    text-align: center;
 }
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #22d3ee;
+}
+
 
 /* Footer */
 footer {
     text-align: center;
     padding: 18px;
     color: #94a3b8;
+}
+.resume {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.download {
+    background: green;
+}
+#role {
+    display: inline-block;
+    color: #00e5ff;
+    transition: opacity 0.5s ease-in-out;
+}
+.fade {
+    opacity: 0;
 }
