@@ -8,7 +8,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" as="image" href="./image.png">
 </head>
 <body>
 
@@ -20,6 +19,7 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="./resume.pdf" target="_blank">Resume</a>
     </nav>
 </header>
 
@@ -28,7 +28,7 @@
     <div class="content">
         <h4>Hello, I'm</h4>
         <h1>SRIRAMKUMAR D</h1>
-        <h3>A <span>FrontEnd Developer</span></h3>
+        <h3>A <span id="role">FrontEnd Developer</span></h3>
         <p>
             Electronics and Communication Engineering student with a strong interest
             in Web Development, problem solving, and software engineering.
@@ -42,13 +42,17 @@
                 <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://www.codechef.com/users/a23bec108srirm" target="_blank">
-                <i class="fas fa-code"></i>
+                <i class="fab fa-codechef"></i>
             </a>
             <a href="https://leetcode.com/u/sriramkumar007/" target="_blank">
-                <i class="fas fa-laptop-code"></i>
+                <i class="fab fa-leetcode"></i>
             </a>
         </div>
     </div>
+    <div class="resume">
+    <a href="./resume.pdf" target="_blank" class="btn">View Resume</a>
+    <a href="./resume.pdf" download class="btn download">Download</a>
+</div>
 
     <div class="image-box">
        <img src="./image.png" 
@@ -71,6 +75,8 @@
         Web Development, Data Structures, and competitive programming.
         I enjoy building projects, learning new technologies, and continuously
         improving my problem-solving skills through hands-on practice.
+         <strong>Current CGPA: 8.5 / 10</strong>
+        
     </p>
 </section>
 
@@ -87,10 +93,10 @@
         <span>DSA</span>
     </div>
 </section>
-
 <!-- PROJECTS -->
 <section class="section" id="projects">
     <h2>Projects</h2>
+
     <div class="projects">
 
         <div class="card">
@@ -98,11 +104,19 @@
             <p>Single-page portfolio built using HTML and CSS.</p>
         </div>
 
-        <div class="card">
-            <h3>To-Do List App</h3>
-            <p>Task management application using JavaScript.</p>
-        </div>
+        <a href="https://sriramkumar33.github.io/Todo-Engine/" target="_blank" class="project-link">
+            <div class="card">
+                <h3>To-Do List App</h3>
+                <p>Task management application using JavaScript.</p>
+            </div>
+        </a>
 
+        <a href="https://sriramkumar33.github.io/Contact-Form/" target="_blank" class="project-link">
+            <div class="card">
+                <h3>Contact Form</h3>
+                <p>Contact Form application using HTML, CSS and JavaScript.</p>
+            </div>
+        </a>
 
     </div>
 </section>
@@ -120,7 +134,27 @@
 <footer>
     <p>© 2026 Sriramkumar | Student Portfolio</p>
 </footer>
+<script>
+    const roles = [
+        "FrontEnd Developer",
+        "Software Developer",
+        "Java Developer",
+        "Problem Solver"
+    ];
+
+    let index = 0;
+    const roleText = document.getElementById("role");
+
+    setInterval(() => {
+        roleText.classList.add("fade");
+
+        setTimeout(() => {
+            index = (index + 1) % roles.length;
+            roleText.textContent = roles[index];
+            roleText.classList.remove("fade");
+        }, 500);
+    }, 3000);
+</script>
 
 </body>
 </html>
-
