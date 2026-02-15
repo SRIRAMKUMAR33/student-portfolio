@@ -215,3 +215,19 @@ footer {
 .fade {
     opacity: 0;
 }
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .resume {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .image-box {
+        margin-top: 20px;
+    }
+}
